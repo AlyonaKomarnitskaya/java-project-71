@@ -17,9 +17,9 @@ import com.fasterxml.jackson.databind.ObjectMapper;
         description = "Compares two configuration files and shows a difference.")
 
 class App implements Callable<String> {
-    @Parameters(index = "0", description = "path to first file.")
+    @Parameters(description = "path to first file.")
     private String filepath1;
-    @Parameters(index = "1", description = "path to second file")
+    @Parameters(description = "path to second file")
     private String filepath2;
 
     @Option(names = {"-f", "--format"}, description = "output format [default: stylish]")
