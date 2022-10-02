@@ -34,7 +34,9 @@ class App implements Callable<String> {
         ObjectMapper mapper = new ObjectMapper();
         Map<String, Object> map1 = mapper.readValue(json1, Map.class);
         Map<String, Object> map2 = mapper.readValue(json2, Map.class);
+        System.out.println(Differ.generate(map1, map2));
         return Differ.generate(map1, map2);
+        System.out.println(Differ.generate(map1, map2));
     }
     public static void main(String[] args) {
         int exitCode = new CommandLine(new App()).execute(args);
