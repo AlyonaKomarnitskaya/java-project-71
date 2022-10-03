@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: org.yaml:snakeyaml:1.31">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../../.gradle/caches/modules-2/files-2.1/org.yaml/snakeyaml/1.31/cf26b7b05fef01e7bec00cb88ab4feeeba743e12/snakeyaml-1.31.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/../../.gradle/caches/modules-2/files-2.1/org.yaml/snakeyaml/1.31/5e8249ed1694808d6a3fd9d9dc4270365666fe97/snakeyaml-1.31-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
