@@ -22,13 +22,13 @@ public class DifferTest {
     @Test
     public static void testDiffer1() throws Exception {
         String expected = """
-        {
-            - game: TLOU
-            - release date: 2013
-            - sequel: true
-            - studio: Naughty Dog
-        }
-        """;
+                {
+                    - game: TLOU
+                    - release date: 2013
+                    - sequel: true
+                    - studio: Naughty Dog
+                }
+                """;
         Path path1 = Paths.get(pathEmpty).toAbsolutePath();
         Path path2 = Paths.get(pathOrig).toAbsolutePath();
         String json1 = Files.readString(path1);
@@ -50,7 +50,7 @@ public class DifferTest {
                     release date: 2013
                     sequel: true
                     studio: Naughty Dog
-                }             
+                }
                 """;
         Path path1 = Paths.get(pathSame).toAbsolutePath();
         Path path2 = Paths.get(pathOrig).toAbsolutePath();
@@ -73,7 +73,7 @@ public class DifferTest {
                     release date: 2013
                   - sequel: true
                     studio: Naughty Dog
-                }            
+                }
                 """;
         Path path1 = Paths.get(pathTest1).toAbsolutePath();
         Path path2 = Paths.get(pathOrig).toAbsolutePath();
@@ -97,7 +97,7 @@ public class DifferTest {
                     sequel: true
                     studio: Naughty Dog
                   + tv adaptation: true
-                }         
+                }
                 """;
         Path path1 = Paths.get(pathTest2).toAbsolutePath();
         Path path2 = Paths.get(pathOrig).toAbsolutePath();
@@ -123,7 +123,7 @@ public class DifferTest {
                   - sequel: true
                   + sequel: false
                     studio: Naughty Dog
-                }         
+                }
                 """;
         Path path1 = Paths.get(pathTest3).toAbsolutePath();
         Path path2 = Paths.get(pathOrig).toAbsolutePath();
