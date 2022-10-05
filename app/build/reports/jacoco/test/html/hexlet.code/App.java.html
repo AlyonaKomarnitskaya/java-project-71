@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>App.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">app</a> &gt; <a href="index.source.html" class="el_package">hexlet.code</a> &gt; <span class="el_source">App.java</span></div><h1>App.java</h1><pre class="source lang-java linenums">package hexlet.code;
+
+import picocli.CommandLine;
+import picocli.CommandLine.Command;
+import picocli.CommandLine.Option;
+import picocli.CommandLine.Parameters;
+
+
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.util.Map;
+import java.util.concurrent.Callable;
+import com.fasterxml.jackson.databind.ObjectMapper;
+
+@Command(name = &quot;gendiff&quot;, mixinStandardHelpOptions = true, version = &quot;gendiff 1.0&quot;,
+        description = &quot;Compares two configuration files and shows a difference.&quot;)
+
+<span class="nc" id="L19">class App implements Callable&lt;String&gt; {</span>
+    @Parameters(description = &quot;path to first file.&quot;)
+    private String filepath1;
+    @Parameters(description = &quot;path to second file&quot;)
+    private String filepath2;
+
+<span class="nc" id="L25">    @Option(names = {&quot;-f&quot;, &quot;--format&quot;}, description = &quot;output format [default: stylish]&quot;)</span>
+    private String format = &quot;format&quot;;
+
+    @Override
+    public String call() throws Exception {
+<span class="nc" id="L30">        Path path1 = Paths.get(filepath1).toAbsolutePath();</span>
+<span class="nc" id="L31">        Path path2 = Paths.get(filepath2).toAbsolutePath();</span>
+<span class="nc" id="L32">        String json1 = Files.readString(path1);</span>
+<span class="nc" id="L33">        String json2 = Files.readString(path2);</span>
+<span class="nc" id="L34">        ObjectMapper mapper = new ObjectMapper();</span>
+<span class="nc" id="L35">        Map&lt;String, Object&gt; map1 = mapper.readValue(json1, Map.class); // делаем java object из json</span>
+<span class="nc" id="L36">        Map&lt;String, Object&gt; map2 = mapper.readValue(json2, Map.class);</span>
+
+
+<span class="nc" id="L39">        System.out.println(Differ.generate(map1, map2));</span>
+<span class="nc" id="L40">        return Differ.generate(map1, map2);</span>
+
+    }
+    public static void main(String[] args) {
+<span class="nc" id="L44">        int exitCode = new CommandLine(new App()).execute(args);</span>
+<span class="nc" id="L45">        System.exit(exitCode);</span>
+<span class="nc" id="L46">    }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

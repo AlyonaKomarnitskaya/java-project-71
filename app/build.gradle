@@ -35,12 +35,6 @@ compileJava {
     options.release = 17
     options.compilerArgs += ["-Aproject=${project.group}/${project.name}"]
 }
-test {
-    finalizedBy jacocoTestReport
-}
-jacocoTestReport {
-    dependsOn test
-}
 jacocoTestReport {
     reports {
         xml.required = true
