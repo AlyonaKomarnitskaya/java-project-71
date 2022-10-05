@@ -22,10 +22,6 @@ compileJava {
     options.compilerArgs += ["-Aproject=${project.group}/${project.name}"]
 }
 
-application {
-    mainClass = 'io.hexlet.boilerplate.HelloWorld'
-}
-
 dependencies {
     implementation 'org.apache.commons:commons-lang3:3.12.0'
 
