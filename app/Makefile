@@ -27,6 +27,8 @@ lint:
 update-deps:
 	./gradlew useLatestVersions
 
+coverageCommand:
+	make report
 
 build-run: build run
 
