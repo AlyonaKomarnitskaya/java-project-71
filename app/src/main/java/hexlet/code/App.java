@@ -32,7 +32,7 @@ class App implements Callable<String> {
         String json1 = Files.readString(path1);
         String json2 = Files.readString(path2);
         ObjectMapper mapper = new ObjectMapper();
-        Map<String, Object> map1 = mapper.readValue(json1, Map.class);
+        Map<String, Object> map1 = mapper.readValue(json1, Map.class); // делаем java object из json
         Map<String, Object> map2 = mapper.readValue(json2, Map.class);
 
 
