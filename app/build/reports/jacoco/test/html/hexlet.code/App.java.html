@@ -5,44 +5,33 @@ import picocli.CommandLine.Command;
 import picocli.CommandLine.Option;
 import picocli.CommandLine.Parameters;
 
-
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
 import java.util.Map;
 import java.util.concurrent.Callable;
-import com.fasterxml.jackson.databind.ObjectMapper;
+
 
 @Command(name = &quot;gendiff&quot;, mixinStandardHelpOptions = true, version = &quot;gendiff 1.0&quot;,
         description = &quot;Compares two configuration files and shows a difference.&quot;)
 
-<span class="nc" id="L19">class App implements Callable&lt;String&gt; {</span>
+<span class="nc" id="L15">class App implements Callable&lt;String&gt; {</span>
     @Parameters(description = &quot;path to first file.&quot;)
     private String filepath1;
     @Parameters(description = &quot;path to second file&quot;)
     private String filepath2;
 
-<span class="nc" id="L25">    @Option(names = {&quot;-f&quot;, &quot;--format&quot;}, description = &quot;output format [default: stylish]&quot;)</span>
+<span class="nc" id="L21">    @Option(names = {&quot;-f&quot;, &quot;--format&quot;}, description = &quot;output format [default: stylish]&quot;)</span>
     private String format = &quot;format&quot;;
 
     @Override
     public String call() throws Exception {
-<span class="nc" id="L30">        Path path1 = Paths.get(filepath1).toAbsolutePath();</span>
-<span class="nc" id="L31">        Path path2 = Paths.get(filepath2).toAbsolutePath();</span>
-<span class="nc" id="L32">        String json1 = Files.readString(path1);</span>
-<span class="nc" id="L33">        String json2 = Files.readString(path2);</span>
-<span class="nc" id="L34">        ObjectMapper mapper = new ObjectMapper();</span>
-<span class="nc" id="L35">        Map&lt;String, Object&gt; map1 = mapper.readValue(json1, Map.class); // делаем java object из json</span>
-<span class="nc" id="L36">        Map&lt;String, Object&gt; map2 = mapper.readValue(json2, Map.class);</span>
-
-
-<span class="nc" id="L39">        System.out.println(Differ.generate(map1, map2));</span>
-<span class="nc" id="L40">        return Differ.generate(map1, map2);</span>
+<span class="nc" id="L26">        Map&lt;String, Object&gt; map1 = Parser.parser(filepath1);</span>
+<span class="nc" id="L27">        Map&lt;String, Object&gt; map2 = Parser.parser(filepath2);</span>
+<span class="nc" id="L28">        System.out.println(Differ.generate(map1, map2));</span>
+<span class="nc" id="L29">        return Differ.generate(map1, map2);</span>
 
     }
     public static void main(String[] args) {
-<span class="nc" id="L44">        int exitCode = new CommandLine(new App()).execute(args);</span>
-<span class="nc" id="L45">        System.exit(exitCode);</span>
-<span class="nc" id="L46">    }</span>
+<span class="nc" id="L33">        int exitCode = new CommandLine(new App()).execute(args);</span>
+<span class="nc" id="L34">        System.exit(exitCode);</span>
+<span class="nc" id="L35">    }</span>
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

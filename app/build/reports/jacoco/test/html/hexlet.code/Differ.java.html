@@ -6,28 +6,28 @@ import java.util.TreeSet;
 
 <span class="nc" id="L7">public class Differ {</span>
     public static String generate(Map&lt;String, Object&gt; map1, Map&lt;String, Object&gt; map2) {
-<span class="nc" id="L9">        StringBuilder result = new StringBuilder(&quot;{\n&quot;);</span>
-<span class="nc" id="L10">        Set&lt;String&gt; commonKeys = new TreeSet&lt;&gt;();</span>
-<span class="nc" id="L11">        commonKeys.addAll(map1.keySet());</span>
-<span class="nc" id="L12">        commonKeys.addAll(map2.keySet());</span>
+<span class="fc" id="L9">        StringBuilder result = new StringBuilder(&quot;{\n&quot;);</span>
+<span class="fc" id="L10">        Set&lt;String&gt; commonKeys = new TreeSet&lt;&gt;();</span>
+<span class="fc" id="L11">        commonKeys.addAll(map1.keySet());</span>
+<span class="fc" id="L12">        commonKeys.addAll(map2.keySet());</span>
 
-<span class="nc bnc" id="L14" title="All 2 branches missed.">        for (var key : commonKeys) {</span>
-<span class="nc" id="L15">            String string1 = key + &quot;: &quot; + map1.get(key) + &quot;\n&quot;;</span>
-<span class="nc" id="L16">            String string2 = key + &quot;: &quot; + map2.get(key) + &quot;\n&quot;;</span>
-<span class="nc bnc" id="L17" title="All 2 branches missed.">            if (!map1.containsKey(key)) {</span>
-<span class="nc" id="L18">                result.append(&quot;  + &quot;).append(string2);</span>
-<span class="nc bnc" id="L19" title="All 2 branches missed.">            } else if (!map2.containsKey(key)) {</span>
-<span class="nc" id="L20">                result.append(&quot;  - &quot;).append(string1);</span>
+<span class="fc bfc" id="L14" title="All 2 branches covered.">        for (var key : commonKeys) {</span>
+<span class="fc" id="L15">            String string1 = key + &quot;: &quot; + map1.get(key) + &quot;\n&quot;;</span>
+<span class="fc" id="L16">            String string2 = key + &quot;: &quot; + map2.get(key) + &quot;\n&quot;;</span>
+<span class="fc bfc" id="L17" title="All 2 branches covered.">            if (!map1.containsKey(key)) {</span>
+<span class="fc" id="L18">                result.append(&quot;  + &quot;).append(string2);</span>
+<span class="fc bfc" id="L19" title="All 2 branches covered.">            } else if (!map2.containsKey(key)) {</span>
+<span class="fc" id="L20">                result.append(&quot;  - &quot;).append(string1);</span>
             } else {
-<span class="nc bnc" id="L22" title="All 2 branches missed.">                if (map1.get(key).equals(map2.get(key))) {</span>
-<span class="nc" id="L23">                    result.append(&quot;    &quot;).append(string1);</span>
+<span class="fc bfc" id="L22" title="All 2 branches covered.">                if (map1.get(key).equals(map2.get(key))) {</span>
+<span class="fc" id="L23">                    result.append(&quot;    &quot;).append(string1);</span>
                 } else {
-<span class="nc" id="L25">                    result.append(&quot;  - &quot;).append(string1);</span>
-<span class="nc" id="L26">                    result.append(&quot;  + &quot;).append(string2);</span>
+<span class="fc" id="L25">                    result.append(&quot;  - &quot;).append(string1);</span>
+<span class="fc" id="L26">                    result.append(&quot;  + &quot;).append(string2);</span>
                 }
             }
-<span class="nc" id="L29">        }</span>
-<span class="nc" id="L30">        return result.append(&quot;}&quot;).toString().trim();</span>
+<span class="fc" id="L29">        }</span>
+<span class="fc" id="L30">        return result.append(&quot;}&quot;).toString().trim();</span>
     }
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

@@ -2,4 +2,6 @@
 <checkstyle version="9.2.1">
 <file name="/root/java-project-71/app/src/test/java/hexlet/code/DifferTest.java">
 </file>
+<file name="/root/java-project-71/app/src/test/java/hexlet/code/ParserTest.java">
+</file>
 </checkstyle>

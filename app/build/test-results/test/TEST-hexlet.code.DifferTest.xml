@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="hexlet.code.DifferTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2022-10-08T20:25:09" hostname="LAPTOP-B1P1P317" time="0.425">
+  <properties/>
+  <testcase name="testDiffer1()" classname="hexlet.code.DifferTest" time="0.41"/>
+  <testcase name="testDiffer2()" classname="hexlet.code.DifferTest" time="0.003"/>
+  <testcase name="testDiffer3()" classname="hexlet.code.DifferTest" time="0.002"/>
+  <testcase name="testDiffer4()" classname="hexlet.code.DifferTest" time="0.004"/>
+  <testcase name="testDiffer5()" classname="hexlet.code.DifferTest" time="0.003"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
