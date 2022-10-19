@@ -5,7 +5,6 @@ import picocli.CommandLine.Command;
 import picocli.CommandLine.Option;
 import picocli.CommandLine.Parameters;
 
-import java.util.Map;
 import java.util.concurrent.Callable;
 
 
@@ -18,17 +17,17 @@ class App implements Callable<String> {
     @Parameters(description = "path to second file")
     private String filepath2;
 
-    @Option(names = {"-f", "--format"}, description = "output format [default: stylish]")
-    private String format = "format";
+    @Option(names = {"-f", "--format"},
+            description = "output format: stylish, plain, json, no-format [default: ${DEFAULT-VALUE}]",
+            defaultValue = "stylish")
+    private String format;
 
     @Override
     public String call() throws Exception {
-        Map<String, Object> map1 = Parser.parser(filepath1);
-        Map<String, Object> map2 = Parser.parser(filepath2);
-        System.out.println(Differ.generate(map1, map2));
-        return Differ.generate(map1, map2);
-
+        System.out.println(Differ.generate(filepath1, filepath2, format));
+        return Differ.generate(filepath1, filepath2, format);
     }
+
     public static void main(String[] args) {
         int exitCode = new CommandLine(new App()).execute(args);
         System.exit(exitCode);

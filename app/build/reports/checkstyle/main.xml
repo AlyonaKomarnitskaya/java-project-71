@@ -4,6 +4,14 @@
 </file>
 <file name="/root/java-project-71/app/src/main/java/hexlet/code/Differ.java">
 </file>
+<file name="/root/java-project-71/app/src/main/java/hexlet/code/Formatter.java">
+</file>
 <file name="/root/java-project-71/app/src/main/java/hexlet/code/Parser.java">
+</file>
+<file name="/root/java-project-71/app/src/main/java/hexlet/code/formatters/Json.java">
+</file>
+<file name="/root/java-project-71/app/src/main/java/hexlet/code/formatters/Plain.java">
+</file>
+<file name="/root/java-project-71/app/src/main/java/hexlet/code/formatters/Stylish.java">
 </file>
 </checkstyle>
