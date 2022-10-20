@@ -1,14 +1,9 @@
 # Ignore Gradle project-specific cache directory
-<<<<<<< HEAD
 .gradle
-=======
-/.gradle/
->>>>>>> origin/main
 
 # Ignore Gradle build output directory
 build
 
-<<<<<<< HEAD
 **/logs/
 
 .settings
@@ -16,6 +11,3 @@ bin
 .project*
 .classpath
 .idea/
-=======
-/.idea/
->>>>>>> origin/main
