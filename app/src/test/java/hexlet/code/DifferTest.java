@@ -106,7 +106,6 @@ public class DifferTest {
     @Test
     public void testPlain1() throws Exception {
         String expected = """
-                {
                   Property 'chars2' was updated. From [complex value] to false
                   Property 'checked' was updated. From false to true
                   Property 'default' was updated. From null to [complex value]
@@ -119,15 +118,13 @@ public class DifferTest {
                   Property 'obj1' was added with value: [complex value]
                   Property 'setting1' was updated. From 'Some value' to 'Another value'
                   Property 'setting2' was updated. From 200 to 300
-                  Property 'setting3' was updated. From true to 'none'
-                }""";
+                  Property 'setting3' was updated. From true to 'none'""";
         assertEquals(expected, Differ.generate(path1, path2, "plain"));
     }
 
     @Test
     public void testPlain2() throws Exception {
         String expected = """
-              {
                 Property 'chars2' was updated. From [complex value] to false
                 Property 'checked' was updated. From false to true
                 Property 'default' was updated. From null to [complex value]
@@ -140,8 +137,7 @@ public class DifferTest {
                 Property 'obj1' was added with value: [complex value]
                 Property 'setting1' was updated. From 'Some value' to 'Another value'
                 Property 'setting2' was updated. From 200 to 300
-                Property 'setting3' was updated. From true to 'none'
-              }""";
+                Property 'setting3' was updated. From true to 'none'""";
         assertEquals(expected, Differ.generate(path3, path4, "plain"));
     }
 
