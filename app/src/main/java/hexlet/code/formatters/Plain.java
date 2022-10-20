@@ -34,7 +34,7 @@ public class Plain {
                     System.out.print("Error");
             }
         }
-        return String.join("\n  ", resultList);
+        return String.join("\n", resultList);
 
     }
 
