@@ -6,7 +6,7 @@ plugins {
     id 'com.adarshr.test-logger' version '3.2.0'
 }
 
-group = 'io.hexlet'
+group = 'code.hexlet'
 version = '1.0.3-SNAPSHOT'
 
 repositories {
