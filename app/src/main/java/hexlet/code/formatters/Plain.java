@@ -27,14 +27,14 @@ public class Plain {
                     resultList.add("Property '" + key + "' was added with value: " + complexValue(map2, key));
                     break;
                 case "updated":
-                    resultList.add("Property '" + key + "' was updated."
-                            + " From " + complexValue(map1, key) + " to " + complexValue(map2, key));
+                    resultList.add("Property '" + key + "' was updated. From " + complexValue(map1, key)
+                            + " to " + complexValue(map2, key));
                     break;
                 default:
                     System.out.print("Error");
             }
         }
-        return "{\n" + "  " + String.join("\n  ", resultList) + "\n}";
+        return String.join("\n  ", resultList);
 
     }
 
