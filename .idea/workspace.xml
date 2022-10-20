@@ -4,23 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3cc71f04-4cf9-4379-85ca-32e2a70fba42" name="Changes" comment="fix gitignore">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/.gradle/7.4/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/app/.gradle/7.4/executionHistory/executionHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/.gradle/7.4/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/app/.gradle/7.4/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/.gradle/7.4/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/app/.gradle/7.4/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/.gradle/7.4/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/app/.gradle/7.4/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/.gradle/7.4/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/app/.gradle/7.4/fileHashes/resourceHashesCache.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/app/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/classes/java/main/META-INF/native-image/picocli-generated/io.hexlet/app/proxy-config.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/classes/java/main/META-INF/native-image/picocli-generated/io.hexlet/app/reflect-config.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/classes/java/main/META-INF/native-image/picocli-generated/io.hexlet/app/resource-config.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/classes/java/main/hexlet/code/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/classes/java/main/hexlet/code/App.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/classes/java/main/hexlet/code/formatters/Plain.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/classes/java/main/hexlet/code/formatters/Plain.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/libs/app-1.0.3-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/libs/app-1.0.3-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
-    </list>
+    <list default="true" id="3cc71f04-4cf9-4379-85ca-32e2a70fba42" name="Changes" comment="fix gitignore" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
