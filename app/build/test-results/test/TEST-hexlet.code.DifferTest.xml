@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="hexlet.code.DifferTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2022-10-19T23:17:21" hostname="LAPTOP-B1P1P317" time="0.557">
+<testsuite name="hexlet.code.DifferTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2022-10-19T23:54:16" hostname="LAPTOP-B1P1P317" time="0.549">
   <properties/>
-  <testcase name="testStylish1()" classname="hexlet.code.DifferTest" time="0.423"/>
-  <testcase name="testStylish2()" classname="hexlet.code.DifferTest" time="0.069"/>
-  <testcase name="testJson1()" classname="hexlet.code.DifferTest" time="0.024"/>
-  <testcase name="testJson2()" classname="hexlet.code.DifferTest" time="0.009"/>
-  <testcase name="test1()" classname="hexlet.code.DifferTest" time="0.006"/>
-  <testcase name="testPlain1()" classname="hexlet.code.DifferTest" time="0.014"/>
-  <testcase name="testPlain2()" classname="hexlet.code.DifferTest" time="0.006"/>
+  <testcase name="testStylish1()" classname="hexlet.code.DifferTest" time="0.413"/>
+  <testcase name="testStylish2()" classname="hexlet.code.DifferTest" time="0.066"/>
+  <testcase name="testJson1()" classname="hexlet.code.DifferTest" time="0.023"/>
+  <testcase name="testJson2()" classname="hexlet.code.DifferTest" time="0.012"/>
+  <testcase name="test1()" classname="hexlet.code.DifferTest" time="0.005"/>
+  <testcase name="testPlain1()" classname="hexlet.code.DifferTest" time="0.016"/>
+  <testcase name="testPlain2()" classname="hexlet.code.DifferTest" time="0.007"/>
   <system-out><![CDATA[{
     chars1: [a, b, c]
   - chars2: [d, e, f]
