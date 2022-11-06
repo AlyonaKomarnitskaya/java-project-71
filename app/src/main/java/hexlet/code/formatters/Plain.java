@@ -37,7 +37,7 @@ public class Plain {
                 || data instanceof ArrayList<?>) {
             return "[complex value]";
         } else if (data instanceof String) {
-            return  "'" + data + "'";
+            return "'" + data + "'";
         } else if (data == null) {
             return null;
         }
