@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module external.linked.project.id="app" external.linked.project.path="$MODULE_DIR$/../.." external.root.project.path="$MODULE_DIR$/../.." external.system.id="GRADLE" external.system.module.group="hexlet.code" external.system.module.version="1.0.3-SNAPSHOT" type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <javadoc-paths>
+      <root url="jar://$USER_HOME$/Downloads/jackson-databind-2.13.3-javadoc.jar!/" />
+    </javadoc-paths>
+    <content url="file://$MODULE_DIR$/../..">
+      <excludeFolder url="file://$MODULE_DIR$/../../.gradle" />
+      <excludeFolder url="file://$MODULE_DIR$/../../build" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module-library" exported="">
+      <library>
+        <CLASSES />
+        <JAVADOC>
+          <root url="jar://$USER_HOME$/Downloads/jackson-databind-2.13.zip!/jackson-databind-2.13/docs/javadoc/1.9" />
+          <root url="jar://$USER_HOME$/Downloads/jackson-databind-2.13.zip!/jackson-databind-2.13/docs/javadoc/2.0" />
+          <root url="jar://$USER_HOME$/Downloads/jackson-databind-2.13.zip!/jackson-databind-2.13/docs/javadoc/2.1" />
+          <root url="jar://$USER_HOME$/Downloads/jackson-databind-2.13.zip!/jackson-databind-2.13/docs/javadoc/2.10" />
+          <root url="jar://$USER_HOME$/Downloads/jackson-databind-2.13.zip!/jackson-databind-2.13/docs/javadoc/2.11" />
+          <root url="jar://$USER_HOME$/Downloads/jackson-databind-2.13.zip!/jackson-databind-2.13/docs/javadoc/2.11.rc1" />
+          <root url="jar://$USER_HOME$/Downloads/jackson-databind-2.13.zip!/jackson-databind-2.13/docs/javadoc/2.12" />
+          <root url="jar://$USER_HOME$/Downloads/jackson-databind-2.13.zip!/jackson-databind-2.13/docs/javadoc/2.13" />
+          <root url="jar://$USER_HOME$/Downloads/jackson-databind-2.13.zip!/jackson-databind-2.13/docs/javadoc/2.2" />
+          <root url="jar://$USER_HOME$/Downloads/jackson-databind-2.13.zip!/jackson-databind-2.13/docs/javadoc/2.3" />
+          <root url="jar://$USER_HOME$/Downloads/jackson-databind-2.13.zip!/jackson-databind-2.13/docs/javadoc/2.4" />
+          <root url="jar://$USER_HOME$/Downloads/jackson-databind-2.13.zip!/jackson-databind-2.13/docs/javadoc/2.5" />
+          <root url="jar://$USER_HOME$/Downloads/jackson-databind-2.13.zip!/jackson-databind-2.13/docs/javadoc/2.6" />
+          <root url="jar://$USER_HOME$/Downloads/jackson-databind-2.13.zip!/jackson-databind-2.13/docs/javadoc/2.7" />
+          <root url="jar://$USER_HOME$/Downloads/jackson-databind-2.13.zip!/jackson-databind-2.13/docs/javadoc/2.8" />
+          <root url="jar://$USER_HOME$/Downloads/jackson-databind-2.13.zip!/jackson-databind-2.13/docs/javadoc/2.9" />
+        </JAVADOC>
+        <SOURCES>
+          <root url="jar://$USER_HOME$/Downloads/jackson-databind-2.13.zip!/jackson-databind-2.13/.mvn/wrapper" />
+          <root url="jar://$USER_HOME$/Downloads/jackson-databind-2.13.zip!/jackson-databind-2.13/src/main/java" />
+          <root url="jar://$USER_HOME$/Downloads/jackson-databind-2.13.zip!/jackson-databind-2.13/src/test-jdk14/java" />
+          <root url="jar://$USER_HOME$/Downloads/jackson-databind-2.13.zip!/jackson-databind-2.13/src/test-jdk17/java" />
+          <root url="jar://$USER_HOME$/Downloads/jackson-databind-2.13.zip!/jackson-databind-2.13/src/test/java" />
+        </SOURCES>
+      </library>
+    </orderEntry>
+  </component>
+</module>

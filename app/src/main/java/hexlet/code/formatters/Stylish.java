@@ -1,41 +1,29 @@
 package hexlet.code.formatters;
 
-
-import hexlet.code.Differ;
-
-import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
-import java.util.Map;
+import java.util.TreeMap;
 
 public class Stylish {
-    public static String formatStylish(Map<String, Object> map1, Map<String, Object> map2) {
-        Map<String, String> resultMap = Differ.differ(map1, map2);
-        List<String> keysList = new ArrayList<>(resultMap.keySet());
-
-        Collections.sort(keysList);
-
-        List<String> resultList = new ArrayList<>();
-        for (String key : keysList) {
-            switch (resultMap.get(key)) {
-                case "same":
-                    resultList.add("  " + key + ": " + map2.get(key));
-                    break;
-                case "removed":
-                    resultList.add("- " + key + ": " + map1.get(key));
-                    break;
-                case "added":
-                    resultList.add("+ " + key + ": " + map2.get(key));
-                    break;
-                case "updated":
-                    resultList.add("- " + key + ": " + map1.get(key));
-                    resultList.add("+ " + key + ": " + map2.get(key));
-                    break;
-                default:
-                    System.out.print("Error");
+    public static String formatStylish(List<TreeMap<String, Object>> differences) {
+        StringBuilder result = new StringBuilder("{\n");
+        for (TreeMap<String, Object> diffs : differences) {
+            switch (diffs.get("status").toString()) {
+                case "removed" -> result.append("  - ").append(diffs.get("key")).append(": ")
+                        .append(diffs.get("oldValue")).append("\n");
+                case "added" -> result.append("  + ").append(diffs.get("key")).append(": ")
+                        .append(diffs.get("newValue")).append("\n");
+                case "unchanged" -> result.append("    ").append(diffs.get("key")).append(": ")
+                        .append(diffs.get("oldValue")).append("\n");
+                default -> {
+                    result.append("  - ").append(diffs.get("key")).append(": ")
+                            .append(diffs.get("oldValue")).append("\n");
+                    result.append("  + ").append(diffs.get("key")).append(": ")
+                            .append(diffs.get("newValue")).append("\n");
+                }
             }
-        }
-        return "{\n" + "  " + String.join("\n  ", resultList) + "\n}";
 
+        }
+        result.append("}");
+        return result.toString();
     }
 }

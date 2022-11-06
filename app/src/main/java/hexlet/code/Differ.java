@@ -1,62 +1,38 @@
 package hexlet.code;
 
 
-import java.util.HashMap;
-import java.util.Map;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.util.List;
+import java.util.TreeMap;
 
 public class Differ {
     public static String generate(String pathfile1, String pathfile2, String format) throws Exception {
-        Map<String, Object> map1 = Parser.parser(pathfile1);
-        Map<String, Object> map2 = Parser.parser(pathfile2);
+        String data1 = getData(pathfile1);
+        String data2 = getData(pathfile2);
 
-        String result = Formatter.formatStyle(map1, map2, format);
-        System.out.println(result);
+        String fileType1 = getFType(pathfile1);
+        String fileType2 = getFType(pathfile2);
 
-        return result;
+        TreeMap<String, Object> map1 = Parser.parser(data1, fileType1);
+        TreeMap<String, Object> map2 = Parser.parser(data2, fileType2);
+
+        List<TreeMap<String, Object>> result = GenDifference.differ(map1, map2);
+
+        return Formatter.formatStyle(result, format);
     }
     public static String generate(String pathfile1, String pathfile2) throws Exception {
-        Map<String, Object> map1 = Parser.parser(pathfile1);
-        Map<String, Object> map2 = Parser.parser(pathfile2);
-
-        String result = Formatter.formatStyle(map1, map2, "stylish");
-        System.out.println(result);
-
-        return result;
+        return generate(pathfile1, pathfile2, "stylish");
     }
 
-    public static Map<String, String> makingString(Map<String, Object> map) {
-        Map<String, String> stringToMap = new HashMap<>();
-        for (String key: map.keySet()) {
-            if (map.get(key) != null) {
-                stringToMap.put(key, map.get(key).toString());
-            } else {
-                stringToMap.put(key, "null");
-            }
-        }
-        return stringToMap;
+    public static String getData(String filepath) throws Exception {
+        Path path = Paths.get(filepath.substring(filepath.indexOf("src")));
+        return Files.readString(path);
     }
 
-    public static Map<String, String> differ(Map<String, Object> map1, Map<String, Object> map2) {
-        Map<String, String> result = new HashMap<>();
-        Map<String, String> newMap1 = makingString(map1);
-        Map<String, String> newMap2 = makingString(map2);
-
-        result.putAll(newMap1);
-        result.putAll(newMap2);
-
-        for (String key : result.keySet()) {
-            if (newMap1.containsKey(key) && newMap2.containsKey(key)) {
-                if (newMap1.get(key).equals(newMap2.get(key))) {
-                    result.put(key,  "same");
-                } else {
-                    result.put(key, "updated");
-                }
-            } else if (newMap1.containsKey(key) && !newMap2.containsKey(key)) {
-                result.put(key, "removed");
-            } else {
-                result.put(key, "added");
-            }
-        }
-        return result;
+    public static String getFType(String filepath) {
+        return filepath.substring(filepath.indexOf(".") + 1);
     }
+
 }
