@@ -37,10 +37,10 @@ public class GenDifference {
         return result;
     }
 
-    private static Set<String> getAllKeys(TreeMap<String, Object> valueFilepath1,
-                                          TreeMap<String, Object> valueFilepath2) {
-        Set<String> keys = new TreeSet<>(valueFilepath1.keySet());
-        keys.addAll(valueFilepath2.keySet());
+    private static Set<String> getAllKeys(TreeMap<String, Object> map1,
+                                          TreeMap<String, Object> map2) {
+        Set<String> keys = new TreeSet<>(map1.keySet());
+        keys.addAll(map2.keySet());
         return keys;
     }
 }
