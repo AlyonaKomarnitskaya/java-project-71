@@ -6,11 +6,11 @@ import hexlet.code.formatters.Stylish;
 
 import java.io.IOException;
 import java.util.List;
-import java.util.TreeMap;
+import java.util.Map;
 
 public class Formatter {
     public static String formatStyle(
-            List<TreeMap<String, Object>> differences, String format) throws IOException {
+            List<Map<String, Object>> differences, String format) throws IOException {
         switch (format) {
             case "stylish":
                 return Stylish.formatStylish(differences);

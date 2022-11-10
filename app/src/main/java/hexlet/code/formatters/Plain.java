@@ -4,12 +4,12 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.Map;
-import java.util.TreeMap;
+
 
 public class Plain {
-    public static String formatPlain(List<TreeMap<String, Object>> differences) {
+    public static String formatPlain(List<Map<String, Object>> differences) {
         StringBuilder result = new StringBuilder();
-        for (TreeMap<String, Object> diffs : differences) {
+        for (Map<String, Object> diffs : differences) {
             switch (diffs.get("status").toString()) {
                 case "removed" -> result.append("Property ").append("'")
                         .append(diffs.get("key")).append("'").append(" was removed").append("\n");

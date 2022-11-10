@@ -1,12 +1,12 @@
 package hexlet.code.formatters;
 
 import java.util.List;
-import java.util.TreeMap;
+import java.util.Map;
 
 public class Stylish {
-    public static String formatStylish(List<TreeMap<String, Object>> differences) {
+    public static String formatStylish(List<Map<String, Object>> differences) {
         StringBuilder result = new StringBuilder("{\n");
-        for (TreeMap<String, Object> diffs : differences) {
+        for (Map<String, Object> diffs : differences) {
             switch (diffs.get("status").toString()) {
                 case "removed" -> result.append("  - ").append(diffs.get("key")).append(": ")
                         .append(diffs.get("oldValue")).append("\n");
