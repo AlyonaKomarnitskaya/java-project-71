@@ -39,10 +39,4 @@ public class GenDifference {
         }
         return result;
     }
-
-    private static Set<String> getAllKeys(Map<String, Object> map1, Map<String, Object> map2) {
-        Set<String> keys = new TreeSet<>(map1.keySet());
-        keys.addAll(map2.keySet());
-        return keys;
-    }
 }
